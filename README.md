@@ -17,7 +17,7 @@ google app script code in google sheets
 
 function doPost(e) {
   const sheet = SpreadsheetApp.openByUrl(
-    "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" google sheets url
+    "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" google sheets url 
   ).getSheetByName("Sheet1");
 
   // หาคิวล่าสุด

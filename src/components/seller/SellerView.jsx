@@ -4,7 +4,7 @@ function SellerView() {
   const [orders, setOrders] = useState([])
   const [loading, setLoading] = useState(true)
 
-  const SHEET_URL = 'https://script.google.com/macros/s/AKfycbzjWLUArTL9zYVJEnhqtaTGhs_0apLD7Etlkh1K-r5BHO5UDQSyN5-lTM-9wIKhBw9mlg/exec'
+  const SHEET_URL = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' //google sheet script url
 
   const fetchOrders = async () => {
     try {
@@ -33,7 +33,6 @@ function SellerView() {
   const handlePaid = async (rowIndex, status) => {
     if (status === 'success') return;
 
-    // อัปเดตสถานะใน state ทันที
     setOrders(prev =>
       prev.map(order =>
         order.rowIndex === rowIndex ? { ...order, status: 'success' } : order

@@ -15,7 +15,7 @@ function App() {
   const [isCartOpen, setIsCartOpen] = useState(false)
   const [queueNumber, setQueueNumber] = useState(null)
   const [totalPrice, setTotalPrice] = useState(0)
-  const [showWelcomeModal, setShowWelcomeModal] = useState(true) // สถานะกล่องแจ้งเตือนตอนโหลด
+  const [showWelcomeModal, setShowWelcomeModal] = useState(true)
 
   const addToCart = (food) => {
     setCart([...cart, food])
@@ -35,7 +35,8 @@ function App() {
       params.append(`food${index + 1}`, `${item.name} (${item.price}฿)`)
     })
 
-    const response = await fetch("https://script.google.com/macros/s/AKfycbzjWLUArTL9zYVJEnhqtaTGhs_0apLD7Etlkh1K-r5BHO5UDQSyN5-lTM-9wIKhBw9mlg/exec", {
+    const response = await fetch("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", //google sheet script url
+    {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
@@ -140,7 +141,7 @@ function App() {
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
           <div className="bg-white rounded-lg p-6 max-w-sm w-full shadow-lg text-center">
             <h2 className="text-xl font-bold mb-4">คำเตือน</h2>
-            <p className="mb-6">website ยังไม่เสร็จ 100% ใช้เพื่อเป็นตัวอย่างเท่านนั้น</p>
+            <p className="mb-6">Website ยังไม่สมบูรณ ใช้เพื่อเป็นตัวอย่างเรียนรู้เท่านั้น</p>
             <button
               onClick={() => setShowWelcomeModal(false)}
               className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"

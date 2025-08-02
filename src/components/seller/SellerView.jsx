@@ -4,7 +4,7 @@ function SellerView() {
   const [orders, setOrders] = useState([])
   const [loading, setLoading] = useState(true)
 
-  const SHEET_URL = 'https://script.google.com/macros/s/AKfycbwsoHCw23gYCqPi9voCk0u2FFrYbkL2hZCJ_Z0G9t_T81ifROMuLX86tL0buTTc2w6zmQ/exec'
+  const SHEET_URL = 'https://script.google.com/macros/s/AKfycbzjWLUArTL9zYVJEnhqtaTGhs_0apLD7Etlkh1K-r5BHO5UDQSyN5-lTM-9wIKhBw9mlg/exec'
 
   const fetchOrders = async () => {
     try {

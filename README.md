@@ -17,7 +17,7 @@ google app script code in google sheets
 
 function doPost(e) {
   const sheet = SpreadsheetApp.openByUrl(
-    "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" google sheets url 
+    "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" // google sheets url 
   ).getSheetByName("Sheet1");
 
   // หาคิวล่าสุด
@@ -69,7 +69,7 @@ function doPost(e) {
 
 function doGet() {
   const sheet = SpreadsheetApp.openByUrl(
-    "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" google sheets url
+    "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" // google sheets url
   ).getSheetByName("Sheet1");
 
   const data = sheet.getDataRange().getValues();
@@ -102,7 +102,7 @@ function doDelete(e) {
     return ContentService.createTextOutput("Invalid row");
   }
   const sheet = SpreadsheetApp.openByUrl(
-    "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" google sheets url
+    "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" // google sheets url
   ).getSheetByName("Sheet1");
   sheet.deleteRow(rowIndex);
   return ContentService.createTextOutput("Deleted");
@@ -116,7 +116,7 @@ function doPut(e) {
     return ContentService.createTextOutput("Invalid parameters");
   }
   const sheet = SpreadsheetApp.openByUrl(
-    "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" google sheets url
+    "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" // google sheets url
   ).getSheetByName("Sheet1");
 
   sheet.getRange(rowIndex, sheet.getLastColumn()).setValue(newStatus);

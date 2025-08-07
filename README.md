@@ -11,8 +11,9 @@ Currently, two official plugins are available:
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 
-google app script code in google sheets
+# google app script code in google sheets
 
+```js
 // กด Deploy เป็น Web App โดยอนุญาต Anyone สามารถเข้าถึงได้
 
 function doPost(e) {
@@ -60,7 +61,7 @@ function doPost(e) {
   }
 
   row.push("รวม: " + total + " บาท");
-  row.push("pending"); // สถานะเริ่มต้น = pending
+  row.push("pending");
 
   sheet.appendRow(row);
 
@@ -78,7 +79,7 @@ function doGet() {
   for (let i = 1; i < data.length; i++) {
     const row = data[i];
     const queue = row[0];
-    const items = row.slice(1, row.length - 2); // รายการอาหาร
+    const items = row.slice(1, row.length - 2);
     const totalText = row[row.length - 2];
     const status = row[row.length - 1] || "pending";
 
@@ -122,7 +123,7 @@ function doPut(e) {
   sheet.getRange(rowIndex, sheet.getLastColumn()).setValue(newStatus);
   return ContentService.createTextOutput("Updated");
 }
-
+```
 
 
 By.khinghello aurphix TEAM
